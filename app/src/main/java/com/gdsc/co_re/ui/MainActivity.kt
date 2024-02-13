@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         var navbar = findViewById(R.id.navbar) as BottomNavigationView
 
-        navbar.run { setOnNavigationItemReselectedListener {
+        navbar.run { setOnItemReselectedListener {
             when(it.itemId) {
                 R.id.tab_home -> {
                     val homeFragment = HomeFragment()
