@@ -10,10 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var navbar = findViewById(R.id.navbar) as BottomNavigationView
+        val navbar = findViewById<BottomNavigationView>(R.id.navbar)
 
-        navbar.run { setOnItemReselectedListener {
-            when(it.itemId) {
+        navbar.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
                 R.id.tab_home -> {
                     val homeFragment = HomeFragment()
                     supportFragmentManager.beginTransaction().replace(R.id.fl_container, homeFragment).commit()
@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-            selectedItemId = R.id.tab_home
-        }
+        navbar.selectedItemId = R.id.tab_home
     }
 }
