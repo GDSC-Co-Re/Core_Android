@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="home"/>
+    <item
+        android:id="@+id/tab_find"
+        android:enabled="true"
+        android:icon="@drawable/ic_map"
+        android:title="find CORE"/>
+    <item
+        android:id="@+id/tab_qr"
+        android:enabled="true"
+        android:icon="@drawable/ic_qr"
+        android:title=""/>
+    <item
+        android:id="@+id/tab_community"
+        android:enabled="true"
+        android:icon="@drawable/ic_community"
+        android:title="community"/>
+    <item
+        android:id="@+id/tab_mypage"
+        android:enabled="true"
+        android:icon="@drawable/ic_mypage"
+        android:title="my page"/>
+</menu>
