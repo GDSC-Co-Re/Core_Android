@@ -242,4 +242,150 @@
         android:layout_marginStart="160dp"
         android:layout_marginTop="3dp" />
 
+    <RelativeLayout
+        android:id="@+id/rectangleYellow1"
+        android:layout_width="370dp"
+        android:layout_height="83dp"
+        android:layout_below="@+id/textViewRecentCore"
+        android:background="@drawable/background_green01_rounded"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" >
+        <ImageView
+            android:id="@+id/imageMilk1"
+            android:layout_width="39dp"
+            android:layout_height="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_milk_green_stroke"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp" />
+        <TextView
+            android:id="@+id/textViewName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alley"
+            android:textSize="20sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="90dp" />
+        <TextView
+            android:id="@+id/textViewNameBelow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewName1"
+            android:text="aseptic carton"
+            android:textSize="13sp"
+            android:fontFamily="@font/pretendard_light"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewDate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNameBelow1"
+            android:text="01/31"
+            android:textSize="8sp"
+            android:fontFamily="@font/pretendard_light"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="5dp" />
+        <TextView
+            android:id="@+id/textViewWeight1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName1"
+            android:text="100"
+            android:textSize="35sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="-10dp" />
+        <TextView
+            android:id="@+id/textViewG1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewWeight1"
+            android:layout_alignBaseline="@id/textViewWeight1"
+            android:text="g"
+            android:textSize="17sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rectangleYellow2"
+        android:layout_width="370dp"
+        android:layout_height="83dp"
+        android:layout_below="@+id/rectangleYellow1"
+        android:background="@drawable/background_green01_rounded"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true" >
+        <ImageView
+            android:id="@+id/imageMilk2"
+            android:layout_width="39dp"
+            android:layout_height="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_milk_green_stroke"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="13dp" />
+        <TextView
+            android:id="@+id/textViewName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kenith"
+            android:textSize="20sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="90dp" />
+        <TextView
+            android:id="@+id/textViewNameBelow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewName2"
+            android:text="refrigerated carton"
+            android:textSize="13sp"
+            android:fontFamily="@font/pretendard_light"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewDate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNameBelow2"
+            android:text="01/31"
+            android:textSize="8sp"
+            android:fontFamily="@font/pretendard_light"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="5dp" />
+        <TextView
+            android:id="@+id/textViewWeight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName2"
+            android:text="30"
+            android:textSize="35sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="295dp"
+            android:layout_marginTop="-10dp" />
+        <TextView
+            android:id="@+id/textViewG2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewWeight2"
+            android:layout_alignBaseline="@id/textViewWeight2"
+            android:text="g"
+            android:textSize="17sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="5dp" />
+    </RelativeLayout>
+
 </RelativeLayout>
