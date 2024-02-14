@@ -25,6 +25,7 @@
         android:layout_below="@id/textViewWelcome"
         android:layout_gravity="start"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="-5dp"
         android:text="Doodle !"
         android:textSize="48sp"
         android:fontFamily="@font/pretendard_bold"
@@ -35,7 +36,9 @@
         android:layout_width="match_parent"
         android:layout_height="190dp"
         android:layout_below="@+id/textViewNickname"
-        android:layout_margin="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/background_green03_rounded">
 
         <TextView
@@ -106,6 +109,126 @@
             android:textColor="@color/green_02"
             android:layout_marginStart="5dp" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutCore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rectangleGreen"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rectangleYellowGreen1"
+            android:layout_width="135dp"
+            android:layout_height="129dp"
+            android:background="@drawable/background_green02_rounded"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/textViewIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In"
+                android:textSize="15sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="13dp" />
+            <TextView
+                android:id="@+id/textViewApt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textViewIn"
+                android:layout_alignBaseline="@+id/textViewIn"
+                android:text="Lucky apt,"
+                android:textSize="15sp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="3dp" />
+
+            <TextView
+                android:id="@+id/textViewYouAre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewIn"
+                android:text="You are..."
+                android:textSize="15sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="-3dp" />
+
+            <TextView
+                android:id="@+id/textViewSharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewYouAre"
+                android:text="#"
+                android:textSize="27sp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textColor="@color/green_04"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:id="@+id/textViewAptRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textViewSharp"
+                android:layout_alignBaseline="@+id/textViewSharp"
+                android:text="3"
+                android:textSize="64sp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textColor="@color/green_04"
+                android:layout_marginStart="3dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rectangleYellowGreen2"
+            android:layout_width="215dp"
+            android:layout_height="129dp"
+            android:background="@drawable/background_green02_rounded"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/textViewYouMade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You made"
+                android:textSize="20sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/textViewPaperNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewYouMade"
+                android:text="41"
+                android:textSize="55sp"
+                android:fontFamily="@font/pretendard_bold"
+                android:textColor="@color/green_04"
+                android:layout_marginStart="137dp"
+                android:layout_marginTop="-12dp" />
+
+            <TextView
+                android:id="@+id/textViewToiletPaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewPaperNum"
+                android:text="toilet paper"
+                android:textSize="14sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="-12dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 
