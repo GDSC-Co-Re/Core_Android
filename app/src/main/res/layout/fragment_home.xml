@@ -1,14 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.HomeFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="ui.HomeFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home 화면" />
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:text="Hey,"
+        android:textSize="48sp"
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@android:color/black" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textViewNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewWelcome"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        android:text="Doodle !"
+        android:textSize="48sp"
+        android:fontFamily="@font/pretendard_bold"
+        android:textColor="@android:color/black" />
+
+    <RelativeLayout
+        android:id="@+id/rectangleGreen"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_below="@+id/textViewNickname"
+        android:layout_margin="30dp"
+        android:background="@drawable/background_green03_rounded">
+
+        <TextView
+            android:id="@+id/textViewCored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We CO-REed"
+            android:textSize="24sp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/green_02"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp" />
+
+        <ImageView
+            android:id="@+id/imageViewPaperPack"
+            android:layout_width="145dp"
+            android:layout_height="145dp"
+            android:layout_below="@+id/textViewCored"
+            android:src="@drawable/img_pour_unfill"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/textViewWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageViewPaperPack"
+            android:layout_alignBaseline="@+id/imageViewPaperPack"
+            android:textSize="96sp"
+            android:text="54"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="28dp" />
+
+        <TextView
+            android:id="@+id/textViewKg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewWeight"
+            android:layout_alignBaseline="@+id/textViewWeight"
+            android:text="kg"
+            android:textSize="32sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="5dp" />
+
+        <TextView
+            android:id="@+id/textViewAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewKg"
+            android:text="at"
+            android:textSize="20sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_02"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/textViewApt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewAt"
+            android:layout_alignBaseline="@+id/textViewAt"
+            android:text="Lucky APT"
+            android:textSize="22sp"
+            android:fontFamily="@font/pretendard_bold"
+            android:textColor="@color/green_02"
+            android:layout_marginStart="5dp" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
