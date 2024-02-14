@@ -1,14 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.CommunityFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="ui.CommunityFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Community 화면" />
+        android:id="@+id/textViewAptName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        android:text="Lucky"
+        android:textSize="40sp"
+        android:fontFamily="@font/pretendard_bold"
+        android:textColor="@color/green_05" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textViewApt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textViewAptName"
+        android:layout_alignBaseline="@+id/textViewAptName"
+        android:text=".APT"
+        android:textSize="22sp"
+        android:fontFamily="@font/pretendard_regular"
+        android:textColor="@color/green_05"
+        android:layout_marginStart="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/rectangleDarkGreen"
+        android:layout_width="365dp"
+        android:layout_height="176dp"
+        android:layout_below="@+id/textViewAptName"
+        android:background="@drawable/background_green05_rounded"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true" >
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/textViewKgNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="60dp"
+            android:text="54"
+            android:textSize="25sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/textViewKg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="94dp"
+            android:text="kg"
+            android:textSize="14sp"
+            android:fontFamily="@font/pretendard_thin"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/textViewMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/pieChart"
+            android:layout_alignBaseline="@+id/pieChart"
+            android:textSize="24sp"
+            android:text="CO-RE of March"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="35dp" />
+        <ImageView
+            android:id="@+id/imageAseptic"
+            android:layout_width="19dp"
+            android:layout_height="23dp"
+            android:layout_below="@+id/textViewMonth"
+            android:src="@drawable/ic_milk_green_fill"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="180dp" />
+        <TextView
+            android:id="@+id/textViewAseptic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageAseptic"
+            android:layout_alignBaseline="@+id/imageAseptic"
+            android:textSize="15sp"
+            android:text="aseptic carton"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_03"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="83dp" />
+        <ImageView
+            android:id="@+id/imageRefrigerated"
+            android:layout_width="19dp"
+            android:layout_height="23dp"
+            android:layout_below="@+id/imageAseptic"
+            android:src="@drawable/ic_milk_yellowgreen_fill"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="180dp" />
+        <TextView
+            android:id="@+id/textViewRefrigerated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imageRefrigerated"
+            android:layout_alignBaseline="@+id/imageRefrigerated"
+            android:textSize="15sp"
+            android:text="refrigerated carton"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_02"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="117dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

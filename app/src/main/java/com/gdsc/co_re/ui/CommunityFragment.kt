@@ -1,16 +1,21 @@
 package com.gdsc.co_re.ui
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.gdsc.co_re.R
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.utils.ColorTemplate
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 class CommunityFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
@@ -26,7 +31,33 @@ class CommunityFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_community, container, false)
+        val view = inflater.inflate(R.layout.fragment_community, container, false)
+        val pieChart = view.findViewById<com.github.mikephil.charting.charts.PieChart>(R.id.pieChart)
+
+        val entries = ArrayList<PieEntry>()
+        entries.add(PieEntry(40f, ""))
+        entries.add(PieEntry(60f, ""))
+        val dataSet = PieDataSet(entries, "")
+
+        dataSet.setDrawValues(false)
+        dataSet.sliceSpace = 0f
+
+        dataSet.colors = listOf(
+            ContextCompat.getColor(requireContext(), R.color.green_03),
+            ContextCompat.getColor(requireContext(), R.color.green_02)
+        )
+
+        dataSet.selectionShift = 5f
+
+        val data = PieData(dataSet)
+        pieChart.data = data
+        pieChart.description.isEnabled = false // Description
+        pieChart.legend.isEnabled = false // 범례
+        pieChart.holeRadius = 60f // 원의 크기를 조절함
+        pieChart.setHoleColor(Color.TRANSPARENT)
+        pieChart.invalidate()
+
+        return view
     }
 
     companion object {
