@@ -32,13 +32,12 @@
 
     <RelativeLayout
         android:id="@+id/rectangleDarkGreen"
-        android:layout_width="365dp"
+        android:layout_width="370dp"
         android:layout_height="176dp"
         android:layout_below="@+id/textViewAptName"
         android:background="@drawable/background_green05_rounded"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true" >
-
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/pieChart"
             android:layout_width="130dp"
@@ -123,6 +122,102 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="117dp" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rectangleDarkGreen"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RelativeLayout
+            android:id="@+id/rectangleGreen1"
+            android:layout_width="173dp"
+            android:layout_height="129dp"
+            android:background="@drawable/background_green03_rounded"
+            android:layout_marginEnd="8dp">
+            <TextView
+                android:id="@+id/textViewLocalRanking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Local ranking"
+                android:textSize="18sp"
+                android:fontFamily="@font/pretendard_light"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="13dp" />
+            <ImageView
+                android:id="@+id/imageArrow1"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_toRightOf="@id/textViewLocalRanking"
+                android:layout_alignTop="@id/textViewLocalRanking"
+                android:src="@drawable/ic_arrow_black_stroke"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="3dp" />
+            <TextView
+                android:id="@+id/textViewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewLocalRanking"
+                android:text="Seodaemun-gu"
+                android:textSize="11sp"
+                android:fontFamily="@font/pretendard_extralight"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="-2dp" />
+            <TextView
+                android:id="@+id/textViewRankNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewLocation"
+                android:text="5"
+                android:textSize="60sp"
+                android:fontFamily="@font/pretendard_semibold"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="95dp"
+                android:layout_marginTop="-10dp" />
+            <TextView
+                android:id="@+id/textViewTh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/textViewRankNum"
+                android:layout_alignBaseline="@id/textViewRankNum"
+                android:text="th"
+                android:textSize="20sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="0dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rectangleYellowGreen1"
+            android:layout_width="173dp"
+            android:layout_height="129dp"
+            android:background="@drawable/background_green02_rounded"
+            android:layout_marginStart="8dp">
+            <TextView
+                android:id="@+id/textViewMissions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Missions"
+                android:textSize="18sp"
+                android:fontFamily="@font/pretendard_light"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="17dp"
+                android:layout_marginStart="13dp" />
+            <ImageView
+                android:id="@+id/imageArrow2"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_toRightOf="@id/textViewMissions"
+                android:layout_alignTop="@id/textViewMissions"
+                android:src="@drawable/ic_arrow_black_stroke"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="3dp" />
+        </RelativeLayout>
+    </LinearLayout>
 
 
 </RelativeLayout>
