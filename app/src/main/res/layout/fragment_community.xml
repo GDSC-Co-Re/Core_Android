@@ -219,5 +219,27 @@
         </RelativeLayout>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textViewRecentCore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="30dp"
+        android:text="Recent CO-RE"
+        android:textSize="24sp"
+        android:fontFamily="@font/pretendard_semibold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/layoutButton" />
+
+    <ImageView
+        android:id="@+id/imageArrow3"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_toRightOf="@id/textViewRecentCore"
+        android:layout_alignTop="@id/textViewRecentCore"
+        android:src="@drawable/ic_arrow_green_stroke"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="3dp" />
 
 </RelativeLayout>
