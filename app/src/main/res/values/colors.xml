@@ -8,4 +8,6 @@
     <color name="green_03">#FF79C61E</color>
     <color name="green_04">#FF2A6F2C</color>
     <color name="green_05">#FF043F2D</color>
+
+    <color name="grey">#FF8B8B8B</color>
 </resources>
