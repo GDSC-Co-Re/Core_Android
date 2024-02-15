@@ -1,5 +1,6 @@
 package com.gdsc.co_re.ui
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -66,25 +67,52 @@ class MypageFragment : Fragment() {
             }
         }
         val leftAxis = barChart.axisLeft
-        leftAxis.textColor = ContextCompat.getColor(requireContext(), R.color.green_02) // 왼쪽 숫자 색상 설정
-        barChart.axisLeft.setDrawAxisLine(false) // 왼쪽 축의 선 비활성화
+        leftAxis.textSize = 14f
+        leftAxis.setLabelCount(4, true) // 4개만 표시
+        leftAxis.textColor = ContextCompat.getColor(requireContext(), R.color.green_03) // 왼쪽 숫자 색상 설정
+        leftAxis.setDrawAxisLine(false) // 왼쪽 축의 선 비활성화
+        leftAxis.setDrawGridLines(true) // 왼쪽 y축 그리드 라인 활성화
+        leftAxis.gridColor = ContextCompat.getColor(requireContext(), R.color.green_02) // 왼쪽 y축 그리드 라인 색상 설정
         barChart.axisRight.setDrawAxisLine(false) // 오른쪽 축의 선 비활성화
         barChart.xAxis.setDrawAxisLine(false) // 위쪽 축의 선 비활성화
         barChart.legend.isEnabled = false // 범례 비활성화
-        barChart.axisLeft.setDrawGridLines(true) // 왼쪽 y축 그리드 라인 활성화
-        barChart.axisLeft.gridColor = ContextCompat.getColor(requireContext(), R.color.green_02) // 왼쪽 y축 그리드 라인 색상 설정
         barChart.description.isEnabled = false // 설명 비활성화
     }
 
     private fun updateBarChart(position: Int?) {
         val entries = when (position) {
-            0 -> listOf(BarEntry(1f, 20f), BarEntry(2f, 30f), BarEntry(3f, 25f), BarEntry(4f, 35f))
-            1 -> listOf(BarEntry(1f, 35f), BarEntry(2f, 15f), BarEntry(3f, 40f), BarEntry(4f, 20f))
-            2 -> listOf(BarEntry(1f, 10f), BarEntry(2f, 45f), BarEntry(3f, 20f), BarEntry(4f, 30f))
+            0 -> listOf(
+                BarEntry(1f, 20f, "1st"),
+                BarEntry(2f, 30f, "2nd"),
+                BarEntry(3f, 25f, "3rd"),
+                BarEntry(4f, 35f, "4th")
+            )
+            1 -> listOf(
+                BarEntry(1f, 35f, "Nov"),
+                BarEntry(2f, 15f, "Dec"),
+                BarEntry(3f, 40f, "Jan"),
+                BarEntry(4f, 20f, "Feb")
+            )
+            2 -> listOf(
+                BarEntry(1f, 10f, "2021"),
+                BarEntry(2f, 45f, "2022"),
+                BarEntry(3f, 20f, "2023"),
+                BarEntry(4f, 30f, "2024")
+            )
             else -> emptyList()
         }
         val dataSet = BarDataSet(entries, "") // 범례
-        dataSet.setDrawValues(false) // 그래프 위 숫자 제거
+
+        // 막대 아래에 텍스트 표시 설정
+        dataSet.setDrawValues(true)
+        dataSet.valueTextSize = 14f
+        dataSet.valueTypeface = Typeface.create("pretendard_light", Typeface.NORMAL)
+        dataSet.valueTextColor = ContextCompat.getColor(requireContext(), R.color.green_03)
+        dataSet.valueFormatter = object : ValueFormatter() {
+            override fun getBarLabel(barEntry: BarEntry?): String {
+                return barEntry?.data.toString()
+            }
+        }
         dataSet.color = ContextCompat.getColor(requireContext(), R.color.green_03) // 그래프 색상
         val data = BarData(dataSet)
         data.barWidth = 0.4f // 그래프 가로 넓이

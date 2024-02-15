@@ -141,8 +141,6 @@
         app:tabIndicatorHeight="0dp"
         app:tabMode="fixed"
         app:tabRippleColor="@null"
-        app:tabPaddingStart="10dp"
-        app:tabPaddingEnd="10dp"
         app:tabBackground="@drawable/tab_background"
         app:tabTextColor="@color/green_03"
         app:tabSelectedTextColor="@android:color/white">
@@ -166,7 +164,7 @@
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:layout_below="@id/tabLayout"
         android:layout_marginTop="20dp"
         android:layout_marginStart="35dp"
