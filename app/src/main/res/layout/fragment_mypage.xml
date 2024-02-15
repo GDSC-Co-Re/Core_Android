@@ -116,4 +116,60 @@
             android:layout_marginStart="5dp" />
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/textViewMyCore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="33dp"
+        android:text="My CO-RE stats"
+        android:textSize="24sp"
+        android:fontFamily="@font/pretendard_semibold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/rectangleGreen" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textViewMyCore"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:layout_marginStart="35dp"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@null"
+        app:tabPaddingStart="10dp"
+        app:tabPaddingEnd="10dp"
+        app:tabBackground="@drawable/tab_background"
+        app:tabTextColor="@color/green_03"
+        app:tabSelectedTextColor="@android:color/white">
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabWeeks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weeks" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabMonths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Months" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabYears"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Years" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/tabLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp" />
+
 </RelativeLayout>
