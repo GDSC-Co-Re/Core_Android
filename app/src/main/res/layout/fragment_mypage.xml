@@ -131,19 +131,22 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/textViewMyCore"
         android:layout_marginTop="20dp"
         android:background="@color/white"
         android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:orientation="horizontal"
         app:tabGravity="fill"
         app:tabIndicatorHeight="0dp"
         app:tabMode="fixed"
         app:tabRippleColor="@null"
         app:tabBackground="@drawable/tab_background"
         app:tabTextColor="@color/green_03"
-        app:tabSelectedTextColor="@android:color/white">
+        app:tabSelectedTextColor="@android:color/white"
+        app:textAllCaps="false">
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabWeeks"
             android:layout_width="wrap_content"

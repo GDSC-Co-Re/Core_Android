@@ -38,6 +38,7 @@ class MypageFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_mypage, container, false)
         val tabLayout = view.findViewById<TabLayout>(R.id.tabLayout)
+
         barChart = view.findViewById(R.id.barChart)
         setupBarChart()
 
