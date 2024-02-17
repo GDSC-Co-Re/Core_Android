@@ -50,8 +50,24 @@ class FindFragment : Fragment(), OnMapReadyCallback {
         viewPager = view.findViewById(R.id.viewPager)
         viewPager.adapter = LocationPagerAdapter(requireContext(), locations)
 
+        viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+            }
+
+            override fun onPageSelected(position: Int) {
+                val selectedLocation = locations[position]
+                val latLng = LatLng(selectedLocation.latitude, selectedLocation.longitude)
+                googleMap.clear()
+                googleMap.addMarker(MarkerOptions().position(latLng).title(selectedLocation.name))
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f))
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+            }
+        })
         return view
     }
+
 
     override fun onMapReady(googleMap: GoogleMap) {
         this.googleMap = googleMap
