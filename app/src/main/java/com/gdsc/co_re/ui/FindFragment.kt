@@ -5,25 +5,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager.widget.ViewPager
 import com.gdsc.co_re.R
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+
 class FindFragment : Fragment(), OnMapReadyCallback {
 
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var mapView: MapView
     private lateinit var googleMap: GoogleMap
-    private var currentMarker: Marker? = null
+    private lateinit var viewPager: ViewPager
+
+    private val locations = listOf(
+        Location("City Hall CORE", "1.2km", "15, Deoksugung-gil, Jung-gu", 37.5562, 126.9724),
+        Location("Ewha Univ CORE", "1.9km", "12, Ewharo-gil, SeoDaeMoon-gu", 130.5562, 80.9724)
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,18 +46,21 @@ class FindFragment : Fragment(), OnMapReadyCallback {
         mapView = view.findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
+
+        viewPager = view.findViewById(R.id.viewPager)
+        viewPager.adapter = LocationPagerAdapter(requireContext(), locations)
+
         return view
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
         this.googleMap = googleMap
-        val locations = listOf(
-            LatLng(37.5562, 126.9724) // 서울역
-        )
         for (location in locations) {
-            googleMap.addMarker(MarkerOptions().position(location))
+            val latLng = LatLng(location.latitude, location.longitude)
+            googleMap.addMarker(MarkerOptions().position(latLng).title(location.name))
         }
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(locations.first(), 10f))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
+            LatLng(locations.first().latitude, locations.first().longitude), 10f))
     }
 
     override fun onStart() {
@@ -93,7 +101,7 @@ class FindFragment : Fragment(), OnMapReadyCallback {
     companion object {
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
+            FindFragment().apply { // HomeFragment() -> FindFragment() 으로 수정합니다.
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
