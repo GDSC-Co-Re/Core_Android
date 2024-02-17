@@ -60,7 +60,7 @@ class FindFragment : Fragment(), OnMapReadyCallback {
             googleMap.addMarker(MarkerOptions().position(latLng).title(location.name))
         }
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
-            LatLng(locations.first().latitude, locations.first().longitude), 10f))
+            LatLng(locations.first().latitude, locations.first().longitude), 15f))
     }
 
     override fun onStart() {

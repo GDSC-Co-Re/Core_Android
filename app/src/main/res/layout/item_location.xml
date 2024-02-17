@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/rectangleLocation"
-        android:layout_width="360dp"
+        android:layout_width="340dp"
         android:layout_height="185dp"
         android:background="@drawable/background_findcore_rounded"
         android:layout_marginTop="460dp"
@@ -47,8 +47,8 @@
             android:layout_height="56dp"
             android:layout_below="@+id/textViewMap"
             android:src="@drawable/ic_arrow_green_fill"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="280dp" />
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="250dp" />
     </RelativeLayout>
 
 </LinearLayout>
