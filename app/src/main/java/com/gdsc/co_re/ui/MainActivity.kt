@@ -1,5 +1,6 @@
 package com.gdsc.co_re.ui
 
+import QrFragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.gdsc.co_re.R

@@ -21,7 +21,7 @@
         android:layout_height="96dp"
         app:itemBackground="@android:color/white"
         app:labelVisibilityMode="labeled"
-        app:itemIconSize="40dp"
+        app:itemIconSize="48dp"
         app:itemIconTint="@drawable/navbar_color"
         app:itemTextColor="@drawable/navbar_color"
         app:itemTextAppearance="@style/NavbarTextStyle"
