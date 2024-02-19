@@ -55,4 +55,6 @@ dependencies {
     // Google Map
     implementation ("com.google.android.gms:play-services-maps:17.0.0")
     implementation ("com.google.android.gms:play-services-location:17.0.0")
+    // Qr
+    implementation ("com.google.android.gms:play-services-vision:20.1.3")
 }
