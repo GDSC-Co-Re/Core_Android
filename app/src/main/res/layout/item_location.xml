@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rectangleLocation"
+        android:layout_width="340dp"
+        android:layout_height="185dp"
+        android:background="@drawable/background_findcore_rounded"
+        android:layout_marginTop="460dp"
+        android:layout_centerHorizontal="true" >
+        <TextView
+            android:id="@+id/textViewLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:fontFamily="@font/pretendard_medium"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewLocationName"
+            android:layout_alignBaseline="@+id/textViewLocationName"
+            android:textSize="16sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="10dp" />
+        <TextView
+            android:id="@+id/textViewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewLocationName"
+            android:textSize="14sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp" />
+        <ImageView
+            android:id="@+id/imageViewArrow"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_below="@+id/textViewMap"
+            android:src="@drawable/ic_arrow_green_fill"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="250dp" />
+    </RelativeLayout>
+
+</LinearLayout>
