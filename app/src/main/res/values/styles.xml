@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="NavbarTextStyle">
-        <item name="android:textSize">23sp</item>
+        <item name="android:textSize">26sp</item>
         <item name="fontFamily">@font/pretendard_regular</item>
     </style>
 </resources>
