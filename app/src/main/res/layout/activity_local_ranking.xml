@@ -6,4 +6,90 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageBackArrow"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        android:layout_gravity="start"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="25dp" />
+
+    <TextView
+        android:id="@+id/textViewLocalRanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="17dp"
+        android:layout_marginStart="30dp"
+        android:text="Local ranking"
+        android:textSize="40sp"
+        android:fontFamily="@font/pretendard_semibold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/imageBackArrow" />
+
+    <RelativeLayout
+        android:id="@+id/rectangleGreen1"
+        android:layout_width="349dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/textViewLocalRanking"
+        android:background="@drawable/background_localranking_rounded"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="27dp" >
+        <TextView
+            android:id="@+id/textViewLocalLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seodaemun-gu"
+            android:textSize="15sp"
+            android:fontFamily="@font/pretendard_light"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="20dp" />
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewLocalLocation"
+            android:text="Lucky APT"
+            android:textSize="32sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-5dp" />
+        <TextView
+            android:id="@+id/textViewRankNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewLocation"
+            android:text="5"
+            android:textSize="80sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="-18dp" />
+        <TextView
+            android:id="@+id/textViewTh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewRankNum"
+            android:layout_alignBaseline="@id/textViewRankNum"
+            android:text="th"
+            android:textSize="24sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="3dp" />
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewRankNum"
+            android:text="need 4kg more to catch up Samho APT"
+            android:textSize="16sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-10dp" />
+    </RelativeLayout>
+
 </RelativeLayout>
