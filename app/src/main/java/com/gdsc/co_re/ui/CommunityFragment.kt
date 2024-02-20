@@ -1,10 +1,12 @@
 package com.gdsc.co_re.ui
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.gdsc.co_re.R
@@ -56,6 +58,13 @@ class CommunityFragment : Fragment() {
         pieChart.holeRadius = 60f // 원의 크기를 조절함
         pieChart.setHoleColor(Color.TRANSPARENT)
         pieChart.invalidate()
+
+        // LocalRanking 이동
+        val imageArrow1 = view.findViewById<ImageView>(R.id.imageCommunityArrow1)
+        imageArrow1.setOnClickListener {
+            val intent = Intent(requireContext(), LocalRankingActivity::class.java)
+            startActivity(intent)
+        }
 
         return view
     }
