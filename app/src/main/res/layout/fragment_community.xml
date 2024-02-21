@@ -148,7 +148,7 @@
                 android:layout_marginTop="17dp"
                 android:layout_marginStart="13dp" />
             <ImageView
-                android:id="@+id/imageArrow1"
+                android:id="@+id/imageCommunityArrow1"
                 android:layout_width="23dp"
                 android:layout_height="23dp"
                 android:layout_toRightOf="@id/textViewLocalRanking"
