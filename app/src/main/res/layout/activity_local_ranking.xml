@@ -13,7 +13,8 @@
         android:layout_gravity="start"
         android:src="@drawable/ic_back_arrow"
         android:layout_marginTop="80dp"
-        android:layout_marginStart="25dp" />
+        android:layout_marginStart="25dp"
+        android:onClick="onBackArrowClicked" />
 
     <TextView
         android:id="@+id/textViewLocalRanking"
