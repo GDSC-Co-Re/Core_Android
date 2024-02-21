@@ -66,6 +66,13 @@ class CommunityFragment : Fragment() {
             startActivity(intent)
         }
 
+        // recentCore 이동
+        val imageArrow3 = view.findViewById<ImageView>(R.id.imageArrow3)
+        imageArrow3.setOnClickListener {
+            val intent = Intent(requireContext(), RecentCoreActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
 
