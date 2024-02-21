@@ -34,7 +34,7 @@
         android:layout_height="200dp"
         android:layout_below="@id/textViewLocalRanking"
         android:background="@drawable/background_localranking_rounded"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
         android:layout_marginStart="27dp" >
         <TextView
             android:id="@+id/textViewLocalLocation"
@@ -90,6 +90,205 @@
             android:textColor="@android:color/white"
             android:layout_marginStart="20dp"
             android:layout_marginTop="-10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewTop3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="30dp"
+        android:text="Top 3 in the local"
+        android:textSize="24sp"
+        android:fontFamily="@font/pretendard_semibold"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/rectangleGreen1" />
+
+    <RelativeLayout
+        android:id="@+id/rectangleYellow1"
+        android:layout_width="349dp"
+        android:layout_height="97dp"
+        android:layout_below="@+id/textViewTop3"
+        android:background="@drawable/background_green01_rounded"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true" >
+        <ImageView
+            android:id="@+id/imageNum1"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/img_rounded_number_1"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mapo Gran XI"
+            android:textSize="24sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/green_05"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="45dp" />
+        <TextView
+            android:id="@+id/textViewNameBelow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewName1"
+            android:text="Daeheong-ro"
+            android:textSize="13sp"
+            android:fontFamily="@font/pretendard_light"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewWeight1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName1"
+            android:text="100"
+            android:textSize="35sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="-8dp" />
+        <TextView
+            android:id="@+id/textViewKg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewWeight1"
+            android:layout_alignBaseline="@id/textViewWeight1"
+            android:text="kg"
+            android:textSize="17sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rectangleYellow2"
+        android:layout_width="349dp"
+        android:layout_height="97dp"
+        android:layout_below="@+id/rectangleYellow1"
+        android:background="@drawable/background_green01_rounded"
+        android:layout_marginTop="13dp"
+        android:layout_centerHorizontal="true" >
+        <ImageView
+            android:id="@+id/imageNum2"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/img_rounded_number_2"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daerim APT"
+            android:textSize="24sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/green_05"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="45dp" />
+        <TextView
+            android:id="@+id/textViewNameBelow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewName2"
+            android:text="Yeonhee-ro"
+            android:textSize="13sp"
+            android:fontFamily="@font/pretendard_light"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewWeight2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName2"
+            android:text="80"
+            android:textSize="35sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="255dp"
+            android:layout_marginTop="-8dp" />
+        <TextView
+            android:id="@+id/textViewKg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewWeight2"
+            android:layout_alignBaseline="@id/textViewWeight2"
+            android:text="kg"
+            android:textSize="17sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rectangleYellow3"
+        android:layout_width="349dp"
+        android:layout_height="97dp"
+        android:layout_below="@+id/rectangleYellow2"
+        android:background="@drawable/background_green01_rounded"
+        android:layout_marginTop="13dp"
+        android:layout_centerHorizontal="true" >
+        <ImageView
+            android:id="@+id/imageNum3"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/img_rounded_number_3"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inwang APT"
+            android:textSize="24sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/green_05"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="45dp" />
+        <TextView
+            android:id="@+id/textViewNameBelow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewName3"
+            android:text="Tongil-ro"
+            android:textSize="13sp"
+            android:fontFamily="@font/pretendard_light"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewWeight3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName3"
+            android:text="80"
+            android:textSize="35sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="-8dp" />
+        <TextView
+            android:id="@+id/textViewKg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewWeight3"
+            android:layout_alignBaseline="@id/textViewWeight3"
+            android:text="kg"
+            android:textSize="17sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="5dp" />
     </RelativeLayout>
 
 </RelativeLayout>
