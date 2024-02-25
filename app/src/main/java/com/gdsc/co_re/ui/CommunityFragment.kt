@@ -66,6 +66,13 @@ class CommunityFragment : Fragment() {
             startActivity(intent)
         }
 
+        // Missions 이동
+        val imageArrow2 = view.findViewById<ImageView>(R.id.imageArrow2)
+        imageArrow2.setOnClickListener {
+            val intent = Intent(requireContext(), MissionsActivity::class.java)
+            startActivity(intent)
+        }
+
         // recentCore 이동
         val imageArrow3 = view.findViewById<ImageView>(R.id.imageArrow3)
         imageArrow3.setOnClickListener {
