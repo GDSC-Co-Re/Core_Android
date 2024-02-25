@@ -6,4 +6,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:id="@+id/rectangleBackground"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@drawable/background_yellowgreen_rounded" >
+
+        <ImageView
+            android:id="@+id/imageBackArrow"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="25dp"
+            android:onClick="onBackArrowClicked" />
+        <TextView
+            android:id="@+id/textViewMissions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="30dp"
+            android:text="Missions"
+            android:textSize="40sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/imageBackArrow" />
+        <TextView
+            android:id="@+id/textViewLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LV"
+            android:textSize="24sp"
+            android:fontFamily="@font/pretendard_light"
+            android:layout_below="@id/textViewMissions"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewLevelNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewMissions"
+            android:text="10"
+            android:textSize="128sp"
+            android:fontFamily="@font/pretendard_medium"
+            android:layout_marginTop="-40dp"
+            android:textColor="@color/green_05"
+            android:layout_marginStart="240dp" />
+        <TextView
+            android:id="@+id/textViewForNextLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For next level..."
+            android:textSize="20sp"
+            android:fontFamily="@font/pretendard_medium"
+            android:layout_below="@id/textViewLevel"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="60dp" />
+
+    </RelativeLayout>
+
 </RelativeLayout>
