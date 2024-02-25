@@ -6,4 +6,135 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:id="@+id/rectangleBackground"
+        android:layout_width="match_parent"
+        android:layout_height="342dp"
+        android:background="@drawable/background_yellowgreen_rounded"
+        android:layout_marginEnd="8dp">
+
+        <ImageView
+            android:id="@+id/imageBackArrow"
+            android:layout_width="42dp"
+            android:layout_height="39dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginTop="80dp"
+            android:layout_marginStart="25dp"
+            android:onClick="onBackArrowClicked" />
+        <TextView
+            android:id="@+id/textViewRecentCore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="30dp"
+            android:text="Recent CO-REs"
+            android:textSize="40sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/imageBackArrow" />
+        <ImageView
+            android:id="@+id/imageMilk"
+            android:layout_width="58dp"
+            android:layout_height="76dp"
+            android:layout_below="@id/textViewRecentCore"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_milk_black_stroke"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="30dp" />
+        <TextView
+            android:id="@+id/textViewKgNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="54"
+            android:textSize="86sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:layout_below="@id/textViewRecentCore"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="0dp" />
+        <TextView
+            android:id="@+id/textViewKg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewKgNum"
+            android:layout_alignBaseline="@id/textViewKgNum"
+            android:text="kg"
+            android:textSize="24sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="5dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewRecentCore"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageMilkA"
+                android:layout_width="22dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start"
+                android:src="@drawable/ic_milk_black_stroke_a"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="270dp"/>
+            <TextView
+                android:id="@+id/textViewAKgNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="32sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="-10dp"/>
+            <TextView
+                android:id="@+id/textViewAKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="15sp"
+                android:fontFamily="@font/pretendard_light"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="-10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewRecentCore"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageMilkR"
+                android:layout_width="25dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start"
+                android:src="@drawable/ic_milk_black_stroke_r"
+                android:layout_marginTop="0dp"
+                android:layout_marginStart="270dp"/>
+            <TextView
+                android:id="@+id/textViewRKgNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24"
+                android:textSize="32sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="-10dp"/>
+            <TextView
+                android:id="@+id/textViewRKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:textSize="15sp"
+                android:fontFamily="@font/pretendard_light"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="-10dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
 </RelativeLayout>
