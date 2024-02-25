@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="450dp"
         android:background="@drawable/background_yellowgreen_rounded" >
-
         <ImageView
             android:id="@+id/imageBackArrow"
             android:layout_width="42dp"
@@ -66,7 +65,118 @@
             android:textColor="@android:color/black"
             android:layout_marginStart="25dp"
             android:layout_marginTop="60dp" />
-
+        <RelativeLayout
+            android:id="@+id/GraphMember"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textViewForNextLevel"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true" >
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="15dp"/>
+            <TextView
+                android:id="@+id/textViewMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="125dp"
+                android:text="Members"
+                android:textSize="14sp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/green_03" />
+            <TextView
+                android:id="@+id/textViewNum1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="125dp"
+                android:text="64"
+                android:textSize="32sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@color/green_05" />
+            <TextView
+                android:id="@+id/textViewPer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="/100"
+                android:fontFamily="@font/pretendard_light"
+                android:textColor="@color/green_05"
+                android:layout_marginStart="168dp"
+                android:layout_marginTop="70dp" />
+            <ImageView
+                android:id="@+id/imageSmile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_smile"
+                android:layout_marginTop="43dp"
+                android:layout_marginStart="53dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/GraphCartons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textViewForNextLevel"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true" >
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/pieChart2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="205dp"/>
+            <TextView
+                android:id="@+id/textViewCartons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="315dp"
+                android:text="Cartons"
+                android:textSize="14sp"
+                android:fontFamily="@font/pretendard_medium"
+                android:textColor="@color/green_03" />
+            <TextView
+                android:id="@+id/textViewNum2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="315dp"
+                android:text="122"
+                android:textSize="32sp"
+                android:fontFamily="@font/pretendard_regular"
+                android:textColor="@color/green_05" />
+            <TextView
+                android:id="@+id/textViewPer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="/100"
+                android:fontFamily="@font/pretendard_light"
+                android:textColor="@color/green_05"
+                android:layout_marginStart="370dp"
+                android:layout_marginTop="70dp" />
+            <ImageView
+                android:id="@+id/imageMilkFill"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_milk_green_fill"
+                android:layout_marginTop="43dp"
+                android:layout_marginStart="243dp" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <TextView

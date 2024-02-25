@@ -1,15 +1,20 @@
 package com.gdsc.co_re.ui
 
+import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import com.gdsc.co_re.R
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.data.BarData
 import com.github.mikephil.charting.data.BarDataSet
 import com.github.mikephil.charting.data.BarEntry
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.ValueFormatter
 import com.google.android.material.tabs.TabLayout
 
@@ -37,7 +42,54 @@ class MissionsActivity : AppCompatActivity() {
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
+
+        // 1번 원형 차트
+        val pieChart = findViewById<com.github.mikephil.charting.charts.PieChart>(R.id.pieChart1)
+        val entries = ArrayList<PieEntry>()
+        entries.add(PieEntry(40f, ""))
+        entries.add(PieEntry(60f, ""))
+        val dataSet = PieDataSet(entries, "")
+
+        dataSet.setDrawValues(false)
+        dataSet.sliceSpace = 0f
+
+        dataSet.colors = listOf(
+            ContextCompat.getColor(this, R.color.white),
+            ContextCompat.getColor(this, R.color.green_03),
+        )
+        dataSet.selectionShift = 5f
+        val data = PieData(dataSet)
+        pieChart.data = data
+        pieChart.description.isEnabled = false // Description
+        pieChart.legend.isEnabled = false // 범례
+        pieChart.holeRadius = 60f // 원의 크기를 조절함
+        pieChart.setHoleColor(Color.TRANSPARENT)
+        pieChart.invalidate()
+
+        // 2번 원형 차트
+        val pieChart2 = findViewById<com.github.mikephil.charting.charts.PieChart>(R.id.pieChart2)
+        val entries2 = ArrayList<PieEntry>()
+        entries2.add(PieEntry(20f, ""))
+        entries2.add(PieEntry(80f, ""))
+        val dataSet2 = PieDataSet(entries, "")
+
+        dataSet2.setDrawValues(false)
+        dataSet2.sliceSpace = 0f
+
+        dataSet2.colors = listOf(
+            ContextCompat.getColor(this, R.color.white),
+            ContextCompat.getColor(this, R.color.green_03),
+        )
+        dataSet2.selectionShift = 5f
+        val data2 = PieData(dataSet2)
+        pieChart2.data = data2
+        pieChart2.description.isEnabled = false // Description
+        pieChart2.legend.isEnabled = false // 범례
+        pieChart2.holeRadius = 60f // 원의 크기를 조절함
+        pieChart2.setHoleColor(Color.TRANSPARENT)
+        pieChart2.invalidate()
     }
+
 
     private fun setupBarChart() {
         barChart.axisRight.isEnabled = false // 오른쪽 축 비활성화
