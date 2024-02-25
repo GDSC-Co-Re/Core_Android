@@ -1,10 +1,12 @@
 package com.gdsc.co_re.ui
 
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.gdsc.co_re.R
@@ -53,6 +55,14 @@ class MypageFragment : Fragment() {
             override fun onTabUnselected(tab: TabLayout.Tab?) {}
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
+
+        // CO-RE story 이동
+        val imageArrow = view.findViewById<ImageView>(R.id.imageArrow3)
+        imageArrow.setOnClickListener {
+            val intent = Intent(requireContext(), CorestoryActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
     private fun setupBarChart() {
